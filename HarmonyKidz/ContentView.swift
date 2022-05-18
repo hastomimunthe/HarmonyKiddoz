@@ -26,7 +26,7 @@ struct ContentView: View {
                 }) {
                     Image("startbutton")
                 }
-//wkwkwk
+//wkwkwkwlw
                 }
                   .offset(x: 0, y: -100)
             }
