@@ -10,14 +10,17 @@ import SwiftUI
 struct InstrumentPage: View {
     
     func buttonPressed(){
-        swinging.toggle()
         print("button pressed")
 
     }
 
     @State private var swingAngle = -5
     @State private var move = false
-    @State private var swinging = false
+    @State private var swingingdrum = false
+    @State private var swingingguitar = false
+    @State private var swingingxylphone = false
+    @State private var swingingkeyboard = false
+    @State private var animationdrum = false
     
     var body: some View {
         
@@ -29,15 +32,15 @@ struct InstrumentPage: View {
         
                     Button( action:{
                         buttonPressed()
-                        swinging.toggle()
+                        swingingdrum.toggle()
                     }) {
                         Image("drum")
                             .resizable()
                             .frame(width: 300, height: 300)
                             .offset(x: -150, y: 200)
                             .scaleEffect(0.6)
-                            .rotationEffect(.degrees(swinging ? -10 : 10), anchor: swinging ? .bottomLeading : .bottomTrailing)
-                            .animation(.easeInOut(duration: 1).repeatCount(14, autoreverses: true), value: swinging)
+                            .rotationEffect(.degrees(swingingdrum ? -10 : 10), anchor: swingingdrum ? .bottomLeading : .bottomTrailing)
+                            .animation(.easeInOut(duration: 1).repeatCount(swingingdrum ? 14 : 0, autoreverses: true), value: swingingdrum)
                             //.onTapGesture {
                             //swinging.toggle()
                             //}
@@ -45,15 +48,15 @@ struct InstrumentPage: View {
                 
                     Button( action:{
                         buttonPressed()
-                        swinging.toggle()
+                        swingingguitar.toggle()
                     }) {
                         Image("guitar")
                             .resizable()
                             .frame(width: 300, height: 300)
                             .offset(x: -50, y: 280)
                             .scaleEffect(0.6)
-                            .rotationEffect(.degrees(swinging ? -10 : 10), anchor: swinging ? .bottomLeading : .bottomTrailing)
-                            .animation(.easeInOut(duration: 1).repeatCount(14, autoreverses: true), value: swinging)
+                            .rotationEffect(.degrees(swingingguitar ? -10 : 10), anchor: swingingguitar ? .bottomLeading : .bottomTrailing)
+                            .animation(.easeInOut(duration: 1).repeatCount(swingingguitar ? 14 : 0, autoreverses: true), value: swingingguitar)
                             //.onTapGesture {
                             //.swinging.toggle()
                             //}
@@ -61,15 +64,15 @@ struct InstrumentPage: View {
                 
                     Button( action:{
                         buttonPressed()
-                        swinging.toggle()
+                        swingingxylphone.toggle()
                     }) {
                     Image("xylophone")
                         .resizable()
                         .frame(width: 200, height: 200)
                         .offset(x: -10, y: 300)
                         .scaleEffect(0.6)
-                        .rotationEffect(.degrees(swinging ? -10 : 10), anchor: swinging ? .bottomLeading : .bottomTrailing)
-                        .animation(.easeInOut(duration: 1).repeatCount(14, autoreverses: true), value: swinging)
+                        .rotationEffect(.degrees(swingingxylphone ? -10 : 10), anchor: swingingxylphone ? .bottomLeading : .bottomTrailing)
+                        .animation(.easeInOut(duration: 1).repeatCount(swingingxylphone ? 14 : 0, autoreverses: true), value: swingingxylphone)
                         //.onTapGesture {
                         //.swinging.toggle()
                         //}
@@ -78,15 +81,15 @@ struct InstrumentPage: View {
                 
                     Button( action:{
                         buttonPressed()
-                    swinging.toggle()
+                    swingingkeyboard.toggle()
                     }) {
                     Image("keyboard")
                         .resizable()
                         .frame(width: 220, height: 220)
                         .offset(x: 0, y: -30)
                         .scaleEffect(0.6)
-                        .rotationEffect(.degrees(swinging ? -10 : 10), anchor: swinging ? .bottomLeading : .bottomTrailing)
-                        .animation(.easeInOut(duration: 1).repeatCount(14, autoreverses: true), value: swinging)
+                        .rotationEffect(.degrees(swingingkeyboard ? -10 : 10), anchor: swingingkeyboard ? .bottomLeading : .bottomTrailing)
+                        .animation(.easeInOut(duration: 1).repeatCount(swingingkeyboard ? 14 : 0, autoreverses: true), value: swingingkeyboard)
                         //.onTapGesture {
                         //.swinging.toggle()
                         //}
