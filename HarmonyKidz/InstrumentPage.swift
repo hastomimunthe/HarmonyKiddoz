@@ -8,7 +8,83 @@
 import SwiftUI
 import AVFoundation
 
-var soundringtone: AVAudioPlayer?
+
+var audioPlayerGuitar : AVAudioPlayer?
+
+func playSoundGuitar(sound: String, type: String){
+    if audioPlayerGuitar != nil {
+        audioPlayerGuitar = nil
+    } else {
+        if let path = Bundle.main.path(forResource: sound, ofType: type){
+            do {
+                audioPlayerGuitar = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
+                audioPlayerGuitar?.play()
+                audioPlayerGuitar?.numberOfLoops = -1
+                print("guitar")
+            } catch {
+                print("wadaw")
+            }
+        }
+    }
+}
+
+var audioPlayerDrum : AVAudioPlayer?
+
+func playSoundDrum(sound: String, type: String){
+    if audioPlayerDrum != nil {
+        audioPlayerDrum = nil
+    } else {
+        if let path = Bundle.main.path(forResource: sound, ofType: type){
+            do {
+                audioPlayerDrum = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
+                audioPlayerDrum?.play()
+                audioPlayerDrum?.numberOfLoops = -1
+                print("drum")
+            } catch {
+                print("wadaw")
+            }
+        }
+    }
+}
+
+var audioPlayerKeyboard : AVAudioPlayer?
+
+func playSoundKeyboard(sound: String, type: String){
+    if audioPlayerKeyboard != nil {
+        audioPlayerKeyboard = nil
+    } else {
+        if let path = Bundle.main.path(forResource: sound, ofType: type){
+            do {
+                audioPlayerKeyboard = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
+                audioPlayerKeyboard?.play()
+                audioPlayerKeyboard?.numberOfLoops = -1
+                print("keyboard")
+            } catch {
+                print("wadaw")
+            }
+        }
+    }
+}
+
+var audioPlayerXylophone : AVAudioPlayer?
+
+func playSoundXylophone(sound: String, type: String){
+    if audioPlayerXylophone != nil {
+        audioPlayerXylophone = nil
+    } else {
+        if let path = Bundle.main.path(forResource: sound, ofType: type){
+            do {
+                audioPlayerXylophone = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
+                audioPlayerXylophone?.play()
+                audioPlayerXylophone?.numberOfLoops = -1
+                print("xylophone")
+            } catch {
+                print("wadaw")
+            }
+        }
+    }
+}
+
 
 struct InstrumentPage: View {
     
@@ -35,6 +111,7 @@ struct InstrumentPage: View {
         
                     Button( action:{
                         buttonPressed()
+                        playSoundDrum(sound: "Drum", type:"mp3")
                         swingingdrum.toggle()
                     }) {
                         Image("drum")
@@ -44,17 +121,13 @@ struct InstrumentPage: View {
                             .scaleEffect(0.6)
                             .rotationEffect(.degrees(swingingdrum ? -10 : 10), anchor: swingingdrum ? .bottomLeading : .bottomTrailing)
                             .animation(.easeInOut(duration: 1).repeatCount(swingingdrum ? 14 : 0, autoreverses: true), value: swingingdrum)
-                            .onAppear(){
-                                soundRingtone()
-                            }
-                            //.onTapGesture {
-                            //swinging.toggle()
-                            //}
+                        
                     }
                 
                     Button( action:{
                         buttonPressed()
                         swingingguitar.toggle()
+                        playSoundGuitar(sound: "Guitar", type:"mp3")
                     }) {
                         Image("guitar")
                             .resizable()
@@ -63,14 +136,13 @@ struct InstrumentPage: View {
                             .scaleEffect(0.6)
                             .rotationEffect(.degrees(swingingguitar ? -10 : 10), anchor: swingingguitar ? .bottomLeading : .bottomTrailing)
                             .animation(.easeInOut(duration: 1).repeatCount(swingingguitar ? 14 : 0, autoreverses: true), value: swingingguitar)
-                            //.onTapGesture {
-                            //.swinging.toggle()
-                            //}
+
                     }
                 
                     Button( action:{
                         buttonPressed()
                         swingingxylphone.toggle()
+                        playSoundXylophone(sound: "Xylophone", type:"mp3")
                     }) {
                     Image("xylophone")
                         .resizable()
@@ -79,15 +151,12 @@ struct InstrumentPage: View {
                         .scaleEffect(0.6)
                         .rotationEffect(.degrees(swingingxylphone ? -10 : 10), anchor: swingingxylphone ? .bottomLeading : .bottomTrailing)
                         .animation(.easeInOut(duration: 1).repeatCount(swingingxylphone ? 14 : 0, autoreverses: true), value: swingingxylphone)
-                        //.onTapGesture {
-                        //.swinging.toggle()
-                        //}
-
                     }
                 
                     Button( action:{
                         buttonPressed()
-                    swingingkeyboard.toggle()
+                        swingingkeyboard.toggle()
+                        playSoundKeyboard(sound: "Keyboard", type:"mp3")
                     }) {
                     Image("keyboard")
                         .resizable()
@@ -96,27 +165,12 @@ struct InstrumentPage: View {
                         .scaleEffect(0.6)
                         .rotationEffect(.degrees(swingingkeyboard ? -10 : 10), anchor: swingingkeyboard ? .bottomLeading : .bottomTrailing)
                         .animation(.easeInOut(duration: 1).repeatCount(swingingkeyboard ? 14 : 0, autoreverses: true), value: swingingkeyboard)
-                        //.onTapGesture {
-                        //.swinging.toggle()
-                        //}
                     }
                 }
             
         } .navigationBarHidden(true)
     }
 }
-
-
-func soundRingtone(){
-    let path = Bundle.main.path(forResource: "BTS", ofType: "mp3")!
-    let url = URL(fileURLWithPath: path)
-    do{
-        try soundringtone = AVAudioPlayer(contentsOf: url)
-    } catch{}
-    soundringtone?.numberOfLoops = -1
-    soundringtone?.play()
-}
-
 
 
 struct InstrumentPage_Previews: PreviewProvider {
