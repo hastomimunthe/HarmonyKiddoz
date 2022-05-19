@@ -6,6 +6,9 @@
 //
 
 import SwiftUI
+import AVFoundation
+
+var soundringtone: AVAudioPlayer?
 
 struct InstrumentPage: View {
     
@@ -41,6 +44,9 @@ struct InstrumentPage: View {
                             .scaleEffect(0.6)
                             .rotationEffect(.degrees(swingingdrum ? -10 : 10), anchor: swingingdrum ? .bottomLeading : .bottomTrailing)
                             .animation(.easeInOut(duration: 1).repeatCount(swingingdrum ? 14 : 0, autoreverses: true), value: swingingdrum)
+                            .onAppear(){
+                                soundRingtone()
+                            }
                             //.onTapGesture {
                             //swinging.toggle()
                             //}
@@ -98,6 +104,17 @@ struct InstrumentPage: View {
             
         } .navigationBarHidden(true)
     }
+}
+
+
+func soundRingtone(){
+    let path = Bundle.main.path(forResource: "BTS", ofType: "mp3")!
+    let url = URL(fileURLWithPath: path)
+    do{
+        try soundringtone = AVAudioPlayer(contentsOf: url)
+    } catch{}
+    soundringtone?.numberOfLoops = -1
+    soundringtone?.play()
 }
 
 
