@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5F5528F02836271200EAF677 /* BTS.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F5528EF2836271200EAF677 /* BTS.mp3 */; };
+		5F69F8F32837215900D593DB /* BeachPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F69F8F22837215900D593DB /* BeachPage.swift */; };
 		6606E3452834E5F00026AA3B /* HarmonyKidzApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6606E3442834E5F00026AA3B /* HarmonyKidzApp.swift */; };
 		6606E3472834E5F00026AA3B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6606E3462834E5F00026AA3B /* ContentView.swift */; };
 		6606E3492834E5F00026AA3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6606E3482834E5F00026AA3B /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		5F5528EF2836271200EAF677 /* BTS.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BTS.mp3; sourceTree = "<group>"; };
+		5F69F8F22837215900D593DB /* BeachPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeachPage.swift; sourceTree = "<group>"; };
 		6606E3412834E5F00026AA3B /* HarmonyKidz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HarmonyKidz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6606E3442834E5F00026AA3B /* HarmonyKidzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarmonyKidzApp.swift; sourceTree = "<group>"; };
 		6606E3462834E5F00026AA3B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				6606E3442834E5F00026AA3B /* HarmonyKidzApp.swift */,
 				6606E3462834E5F00026AA3B /* ContentView.swift */,
 				6606E3542834EA0B0026AA3B /* InstrumentPage.swift */,
+				5F69F8F22837215900D593DB /* BeachPage.swift */,
 				6606E3482834E5F00026AA3B /* Assets.xcassets */,
 				6606E34A2834E5F00026AA3B /* Preview Content */,
 			);
@@ -162,6 +165,7 @@
 			files = (
 				6606E3552834EA0B0026AA3B /* InstrumentPage.swift in Sources */,
 				6606E3472834E5F00026AA3B /* ContentView.swift in Sources */,
+				5F69F8F32837215900D593DB /* BeachPage.swift in Sources */,
 				6606E3452834E5F00026AA3B /* HarmonyKidzApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

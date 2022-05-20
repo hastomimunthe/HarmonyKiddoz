@@ -100,6 +100,7 @@ struct InstrumentPage: View {
     @State private var swingingxylphone = false
     @State private var swingingkeyboard = false
     @State private var animationdrum = false
+    @State private var isActive: Bool = false
     
     var body: some View {
         
@@ -166,6 +167,22 @@ struct InstrumentPage: View {
                         .rotationEffect(.degrees(swingingkeyboard ? -10 : 10), anchor: swingingkeyboard ? .bottomLeading : .bottomTrailing)
                         .animation(.easeInOut(duration: 1).repeatCount(swingingkeyboard ? 14 : 0, autoreverses: true), value: swingingkeyboard)
                     }
+                
+                
+                
+                VStack{
+                    NavigationLink(destination: BeachPage(), isActive: self.$isActive) {
+                        Text("")
+                    }
+                    Button(action:{
+                        self.isActive = true
+                    }) {
+                        Image("NEXTNEXT")
+                    }
+                    }
+                      .offset(x: 0, y: 400)
+                
+                
                 }
             
         } .navigationBarHidden(true)
