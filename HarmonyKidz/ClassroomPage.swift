@@ -85,7 +85,7 @@ func playSoundXylophone(sound: String, type: String){
     }
 }
 
-struct InstrumentPage: View {
+struct ClassroomPage: View {
     
     @State private var isContent1Active = false
     @State private var isContent2Active = false
@@ -101,13 +101,12 @@ struct InstrumentPage: View {
     @State private var swingingguitar = false
     @State private var swingingxylphone = false
     @State private var swingingkeyboard = false
-    @State private var animationdrum = false
     @State private var isActive: Bool = false
     
     var body: some View {
         NavigationView {
         ZStack{
-            Image("background room page")
+            Image("background classroom page")
                 .resizable()
                 .edgesIgnoringSafeArea(.all)
             ZStack{
@@ -121,10 +120,10 @@ struct InstrumentPage: View {
                         .resizable()
                         .scaleEffect(0.6)
                         .rotationEffect(.degrees(swingingdrum ? -10 : 10), anchor: swingingdrum ? .bottomLeading : .bottomTrailing)
-                        .animation(.easeInOut(duration: 1).repeatCount(swingingdrum ? 14 : 0, autoreverses: true), value: swingingdrum)
+                        .animation(.easeInOut(duration: 1).repeatCount(swingingdrum ? 30 : 0, autoreverses: true), value: swingingdrum)
                     }
                 }   .frame(width: 400, height: 400)
-                    .offset(x: -450, y: 80)
+                    .offset(x: -500, y: 30)
                 
                 VStack {
                     Button( action:{
@@ -136,11 +135,11 @@ struct InstrumentPage: View {
                         .resizable()
                         .scaleEffect(0.6)
                         .rotationEffect(.degrees(swingingguitar ? -10 : 10), anchor: swingingguitar ? .bottomLeading : .bottomTrailing)
-                        .animation(.easeInOut(duration: 1).repeatCount(swingingguitar ? 14 : 0, autoreverses: true), value: swingingguitar)
+                        .animation(.easeInOut(duration: 1).repeatCount(swingingguitar ? 30 : 0, autoreverses: true), value: swingingguitar)
 
                     }
                 }   .frame(width: 450, height: 500)
-                    .offset(x: -250, y: 330)
+                    .offset(x: -250, y: 280)
                 
                 VStack{
                     Button( action:{
@@ -152,10 +151,10 @@ struct InstrumentPage: View {
                         .resizable()
                         .scaleEffect(0.6)
                         .rotationEffect(.degrees(swingingxylphone ? -10 : 10), anchor: swingingxylphone ? .bottomLeading : .bottomTrailing)
-                        .animation(.easeInOut(duration: 1).repeatCount(swingingxylphone ? 14 : 0, autoreverses: true), value: swingingxylphone)
+                        .animation(.easeInOut(duration: 1).repeatCount(swingingxylphone ? 30 : 0, autoreverses: true), value: swingingxylphone)
                     }
-                }   .frame(width: 300, height: 300)
-                    .offset(x: 100, y: 400)
+                }   .frame(width: 320, height: 320)
+                    .offset(x: 100, y: 350)
 
                 
                 VStack {
@@ -167,13 +166,13 @@ struct InstrumentPage: View {
                     Image("keyboard")
                         .resizable()
                         .rotationEffect(.degrees(swingingkeyboard ? -10 : 10), anchor: swingingkeyboard ? .bottomLeading : .bottomTrailing)
-                        .animation(.easeInOut(duration: 1).repeatCount(swingingkeyboard ? 14 : 0, autoreverses: true), value: swingingkeyboard)
+                        .animation(.easeInOut(duration: 1).repeatCount(swingingkeyboard ? 30 : 0, autoreverses: true), value: swingingkeyboard)
                     }
                 }   .frame(width: 250, height: 250)
-                    .offset(x: 240, y: 150)
+                    .offset(x: 240, y: 80)
                 
                 VStack{
-                NavigationLink(destination: ContentView(), isActive: self.$isContent1Active) {
+                NavigationLink(destination: MainPageView(), isActive: self.$isContent1Active) {
                         Text("")
                 }
                 Button(action:{
@@ -182,11 +181,11 @@ struct InstrumentPage: View {
                     Image("homebutton1")
                     .resizable()
                     }
-                }  .frame(width: 100, height: 100)
-                      .offset(x: -100, y: 100)
+                } .frame(width: 130, height: 130)
+                      .offset(x: -550, y: -450)
                 
                 VStack{
-                NavigationLink(destination: BeachPage(), isActive: self.$isContent2Active) {
+                NavigationLink(destination: BackyardPage(), isActive: self.$isContent2Active) {
                         Text("")
                 }
                 Button(action:{
@@ -195,8 +194,8 @@ struct InstrumentPage: View {
                     Image("backyard")
                     .resizable()
                     }
-                }  .frame(width: 100, height: 100)
-                      .offset(x: 100, y: 100)
+                }  .frame(width: 300, height: 110)
+                      .offset(x: 480, y: -450)
             } 
             
         }
@@ -208,7 +207,9 @@ struct InstrumentPage: View {
 
 struct InstrumentPage_Previews: PreviewProvider {
     static var previews: some View {
-        InstrumentPage()
+        ClassroomPage()
+        MainPageView()
+        BackyardPage()
             .previewInterfaceOrientation(.landscapeRight)
     }
 }

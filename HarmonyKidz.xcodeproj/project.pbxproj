@@ -7,30 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5F69F8F32837215900D593DB /* BeachPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F69F8F22837215900D593DB /* BeachPage.swift */; };
+		5F69F8F32837215900D593DB /* BackyardPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F69F8F22837215900D593DB /* BackyardPage.swift */; };
 		6606E3452834E5F00026AA3B /* HarmonyKidzApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6606E3442834E5F00026AA3B /* HarmonyKidzApp.swift */; };
-		6606E3472834E5F00026AA3B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6606E3462834E5F00026AA3B /* ContentView.swift */; };
+		6606E3472834E5F00026AA3B /* MainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6606E3462834E5F00026AA3B /* MainPageView.swift */; };
 		6606E3492834E5F00026AA3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6606E3482834E5F00026AA3B /* Assets.xcassets */; };
 		6606E34C2834E5F00026AA3B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6606E34B2834E5F00026AA3B /* Preview Assets.xcassets */; };
-		6606E3552834EA0B0026AA3B /* InstrumentPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6606E3542834EA0B0026AA3B /* InstrumentPage.swift */; };
+		6606E3552834EA0B0026AA3B /* ClassroomPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6606E3542834EA0B0026AA3B /* ClassroomPage.swift */; };
+		6683546C2837ECFB00C6333D /* Guitar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6683546B2837ECFB00C6333D /* Guitar.mp3 */; };
+		668354702837EE9300C6333D /* Handsbell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6683546F2837EE9300C6333D /* Handsbell.mp3 */; };
+		668354722837EE9C00C6333D /* Kalimba.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 668354712837EE9C00C6333D /* Kalimba.mp3 */; };
+		668354742837EEB300C6333D /* Tambourine.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 668354732837EEB300C6333D /* Tambourine.mp3 */; };
+		668354762837EEBB00C6333D /* Violin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 668354752837EEBB00C6333D /* Violin.mp3 */; };
+		668354782837F79600C6333D /* introsound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 668354772837F79600C6333D /* introsound.mp3 */; };
 		669BA0BF2836693100489D0E /* Drum.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 669BA0BE2836693100489D0E /* Drum.mp3 */; };
 		669BA0C12836693B00489D0E /* Keyboard.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 669BA0C02836693B00489D0E /* Keyboard.mp3 */; };
 		669BA0C32836694300489D0E /* Xylophone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 669BA0C22836694300489D0E /* Xylophone.mp3 */; };
-		669BA0C52836695800489D0E /* Guitar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 669BA0C42836695800489D0E /* Guitar.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5F69F8F22837215900D593DB /* BeachPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeachPage.swift; sourceTree = "<group>"; };
+		5F69F8F22837215900D593DB /* BackyardPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackyardPage.swift; sourceTree = "<group>"; };
 		6606E3412834E5F00026AA3B /* HarmonyKidz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HarmonyKidz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6606E3442834E5F00026AA3B /* HarmonyKidzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarmonyKidzApp.swift; sourceTree = "<group>"; };
-		6606E3462834E5F00026AA3B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6606E3462834E5F00026AA3B /* MainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageView.swift; sourceTree = "<group>"; };
 		6606E3482834E5F00026AA3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6606E34B2834E5F00026AA3B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		6606E3542834EA0B0026AA3B /* InstrumentPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentPage.swift; sourceTree = "<group>"; };
+		6606E3542834EA0B0026AA3B /* ClassroomPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassroomPage.swift; sourceTree = "<group>"; };
+		6683546B2837ECFB00C6333D /* Guitar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Guitar.mp3; sourceTree = "<group>"; };
+		6683546F2837EE9300C6333D /* Handsbell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Handsbell.mp3; sourceTree = "<group>"; };
+		668354712837EE9C00C6333D /* Kalimba.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Kalimba.mp3; sourceTree = "<group>"; };
+		668354732837EEB300C6333D /* Tambourine.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Tambourine.mp3; sourceTree = "<group>"; };
+		668354752837EEBB00C6333D /* Violin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Violin.mp3; sourceTree = "<group>"; };
+		668354772837F79600C6333D /* introsound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = introsound.mp3; sourceTree = "<group>"; };
 		669BA0BE2836693100489D0E /* Drum.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Drum.mp3; sourceTree = "<group>"; };
 		669BA0C02836693B00489D0E /* Keyboard.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Keyboard.mp3; sourceTree = "<group>"; };
 		669BA0C22836694300489D0E /* Xylophone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Xylophone.mp3; sourceTree = "<group>"; };
-		669BA0C42836695800489D0E /* Guitar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Guitar.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,9 +74,9 @@
 			isa = PBXGroup;
 			children = (
 				6606E3442834E5F00026AA3B /* HarmonyKidzApp.swift */,
-				6606E3462834E5F00026AA3B /* ContentView.swift */,
-				6606E3542834EA0B0026AA3B /* InstrumentPage.swift */,
-				5F69F8F22837215900D593DB /* BeachPage.swift */,
+				6606E3462834E5F00026AA3B /* MainPageView.swift */,
+				6606E3542834EA0B0026AA3B /* ClassroomPage.swift */,
+				5F69F8F22837215900D593DB /* BackyardPage.swift */,
 				6606E3482834E5F00026AA3B /* Assets.xcassets */,
 				6606E34A2834E5F00026AA3B /* Preview Content */,
 			);
@@ -79,7 +89,12 @@
 				669BA0BE2836693100489D0E /* Drum.mp3 */,
 				669BA0C22836694300489D0E /* Xylophone.mp3 */,
 				669BA0C02836693B00489D0E /* Keyboard.mp3 */,
-				669BA0C42836695800489D0E /* Guitar.mp3 */,
+				6683546B2837ECFB00C6333D /* Guitar.mp3 */,
+				6683546F2837EE9300C6333D /* Handsbell.mp3 */,
+				668354712837EE9C00C6333D /* Kalimba.mp3 */,
+				668354732837EEB300C6333D /* Tambourine.mp3 */,
+				668354752837EEBB00C6333D /* Violin.mp3 */,
+				668354772837F79600C6333D /* introsound.mp3 */,
 				6606E34B2834E5F00026AA3B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -144,11 +159,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				6606E34C2834E5F00026AA3B /* Preview Assets.xcassets in Resources */,
+				6683546C2837ECFB00C6333D /* Guitar.mp3 in Resources */,
+				668354762837EEBB00C6333D /* Violin.mp3 in Resources */,
+				668354782837F79600C6333D /* introsound.mp3 in Resources */,
 				6606E3492834E5F00026AA3B /* Assets.xcassets in Resources */,
 				669BA0C32836694300489D0E /* Xylophone.mp3 in Resources */,
 				669BA0C12836693B00489D0E /* Keyboard.mp3 in Resources */,
+				668354742837EEB300C6333D /* Tambourine.mp3 in Resources */,
 				669BA0BF2836693100489D0E /* Drum.mp3 in Resources */,
-				669BA0C52836695800489D0E /* Guitar.mp3 in Resources */,
+				668354702837EE9300C6333D /* Handsbell.mp3 in Resources */,
+				668354722837EE9C00C6333D /* Kalimba.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,9 +179,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6606E3552834EA0B0026AA3B /* InstrumentPage.swift in Sources */,
-				6606E3472834E5F00026AA3B /* ContentView.swift in Sources */,
-				5F69F8F32837215900D593DB /* BeachPage.swift in Sources */,
+				6606E3552834EA0B0026AA3B /* ClassroomPage.swift in Sources */,
+				6606E3472834E5F00026AA3B /* MainPageView.swift in Sources */,
+				5F69F8F32837215900D593DB /* BackyardPage.swift in Sources */,
 				6606E3452834E5F00026AA3B /* HarmonyKidzApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

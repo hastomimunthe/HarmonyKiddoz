@@ -7,11 +7,12 @@
 
 import SwiftUI
 
+
 @main
 struct HarmonyKidzApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainPageView()
         }
     }
 }

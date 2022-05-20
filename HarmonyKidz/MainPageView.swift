@@ -6,8 +6,24 @@
 //
 
 import SwiftUI
+import AVFoundation
 
-struct ContentView: View {
+var audioPlayer : AVAudioPlayer?
+
+func playSound(sound: String, type: String){
+        if let path = Bundle.main.path(forResource: sound, ofType: type){
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
+                audioPlayer?.play()
+                audioPlayer?.numberOfLoops = -1
+                print("main")
+            } catch {
+                print("wadaw")
+            }
+        }
+}
+
+struct MainPageView: View {
     
     @State private var isActive: Bool = false
     var body: some View {
@@ -18,7 +34,7 @@ struct ContentView: View {
                 .resizable()
                 .ignoresSafeArea()
             VStack{
-                NavigationLink(destination: InstrumentPage(), isActive: self.$isActive) {
+                NavigationLink(destination: ClassroomPage(), isActive: self.$isActive) {
                     Text("")
                 }
                 Button(action:{
@@ -32,13 +48,18 @@ struct ContentView: View {
         
             } .navigationViewStyle(.stack)
             .navigationBarHidden(true)
+            .onAppear {
+                playSound(sound: "introsound", type:"mp3")
+            }
         
         }
     }
     
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MainPageView()
+        ClassroomPage()
+        BackyardPage()
             .previewInterfaceOrientation(.landscapeRight)
     }
 }
