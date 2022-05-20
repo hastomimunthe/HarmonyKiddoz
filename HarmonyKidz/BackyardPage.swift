@@ -8,7 +8,7 @@
 import SwiftUI
 import AVFoundation
 
-
+//wkwk
 var audioPlayerViolin : AVAudioPlayer?
 
 func playSoundViolin(sound: String, type: String){
