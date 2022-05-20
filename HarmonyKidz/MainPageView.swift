@@ -39,9 +39,14 @@ struct MainPageView: View {
                 }
                 Button(action:{
                     self.isActive = true
+                    audioPlayer?.stop()
+                    
+                    
                 }) {
                     Image("startbutton")
                 }
+                    
+                
                 }
                   .offset(x: 0, y: -100)
             }
@@ -51,6 +56,7 @@ struct MainPageView: View {
             .onAppear {
                 playSound(sound: "introsound", type:"mp3")
             }
+            
         
         }
     }
