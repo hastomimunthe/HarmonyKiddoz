@@ -11,7 +11,7 @@ struct BeachPage : View{
     var body: some View{
         ZStack{
         Text("Testing Testing")
-        }.navigationBarHidden(true)
+        }//.navigationBarHidden(true)
     }
 }
 

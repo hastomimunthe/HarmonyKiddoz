@@ -107,9 +107,9 @@ struct InstrumentPage: View {
         ZStack{
             Image("background room page")
                 .resizable()
-                .ignoresSafeArea()
+                .edgesIgnoringSafeArea(.all)
             HStack{
-        
+
                     Button( action:{
                         buttonPressed()
                         playSoundDrum(sound: "Drum", type:"mp3")
@@ -117,12 +117,11 @@ struct InstrumentPage: View {
                     }) {
                         Image("drum")
                             .resizable()
-                            .frame(width: 300, height: 300)
-                            .offset(x: -150, y: 200)
+                            .frame(width: 350, height: 350)
+                            .offset(x: 290, y: 90)
                             .scaleEffect(0.6)
                             .rotationEffect(.degrees(swingingdrum ? -10 : 10), anchor: swingingdrum ? .bottomLeading : .bottomTrailing)
                             .animation(.easeInOut(duration: 1).repeatCount(swingingdrum ? 14 : 0, autoreverses: true), value: swingingdrum)
-                        
                     }
                 
                     Button( action:{
@@ -132,14 +131,13 @@ struct InstrumentPage: View {
                     }) {
                         Image("guitar")
                             .resizable()
-                            .frame(width: 300, height: 300)
-                            .offset(x: -50, y: 280)
+                            .frame(width: 420, height: 450)
+                            .offset(x: 10, y: 580)
                             .scaleEffect(0.6)
                             .rotationEffect(.degrees(swingingguitar ? -10 : 10), anchor: swingingguitar ? .bottomLeading : .bottomTrailing)
                             .animation(.easeInOut(duration: 1).repeatCount(swingingguitar ? 14 : 0, autoreverses: true), value: swingingguitar)
 
                     }
-                
                     Button( action:{
                         buttonPressed()
                         swingingxylphone.toggle()
@@ -147,12 +145,13 @@ struct InstrumentPage: View {
                     }) {
                     Image("xylophone")
                         .resizable()
-                        .frame(width: 200, height: 200)
-                        .offset(x: -10, y: 300)
+                        .frame(width: 300, height: 300)
+                        .offset(x: 100, y: 650)
                         .scaleEffect(0.6)
                         .rotationEffect(.degrees(swingingxylphone ? -10 : 10), anchor: swingingxylphone ? .bottomLeading : .bottomTrailing)
                         .animation(.easeInOut(duration: 1).repeatCount(swingingxylphone ? 14 : 0, autoreverses: true), value: swingingxylphone)
                     }
+
                 
                     Button( action:{
                         buttonPressed()
@@ -161,14 +160,12 @@ struct InstrumentPage: View {
                     }) {
                     Image("keyboard")
                         .resizable()
-                        .frame(width: 220, height: 220)
-                        .offset(x: 0, y: -30)
+                        .frame(width: 300, height: 350)
+                        .offset(x: -50, y: 350)
                         .scaleEffect(0.6)
                         .rotationEffect(.degrees(swingingkeyboard ? -10 : 10), anchor: swingingkeyboard ? .bottomLeading : .bottomTrailing)
                         .animation(.easeInOut(duration: 1).repeatCount(swingingkeyboard ? 14 : 0, autoreverses: true), value: swingingkeyboard)
                     }
-                
-                
                 
                 VStack{
                     NavigationLink(destination: BeachPage(), isActive: self.$isActive) {
@@ -180,10 +177,10 @@ struct InstrumentPage: View {
                         Image("NEXTNEXT")
                     }
                     }
-                      .offset(x: 0, y: 400)
+                      .offset(x: -200, y: 400)
                 
                 
-                }
+            } 
             
         } .navigationBarHidden(true)
     }
