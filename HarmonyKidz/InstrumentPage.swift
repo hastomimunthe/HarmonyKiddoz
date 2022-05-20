@@ -108,7 +108,7 @@ struct InstrumentPage: View {
             Image("background room page")
                 .resizable()
                 .edgesIgnoringSafeArea(.all)
-            HStack{
+            ZStack{
 
                     Button( action:{
                         buttonPressed()
@@ -118,7 +118,7 @@ struct InstrumentPage: View {
                         Image("drum")
                             .resizable()
                             .frame(width: 350, height: 350)
-                            .offset(x: 290, y: 90)
+                            .offset(x: -700, y: 250)
                             .scaleEffect(0.6)
                             .rotationEffect(.degrees(swingingdrum ? -10 : 10), anchor: swingingdrum ? .bottomLeading : .bottomTrailing)
                             .animation(.easeInOut(duration: 1).repeatCount(swingingdrum ? 14 : 0, autoreverses: true), value: swingingdrum)
@@ -132,7 +132,7 @@ struct InstrumentPage: View {
                         Image("guitar")
                             .resizable()
                             .frame(width: 420, height: 450)
-                            .offset(x: 10, y: 580)
+                            .offset(x: -320, y: 650)
                             .scaleEffect(0.6)
                             .rotationEffect(.degrees(swingingguitar ? -10 : 10), anchor: swingingguitar ? .bottomLeading : .bottomTrailing)
                             .animation(.easeInOut(duration: 1).repeatCount(swingingguitar ? 14 : 0, autoreverses: true), value: swingingguitar)
@@ -146,7 +146,7 @@ struct InstrumentPage: View {
                     Image("xylophone")
                         .resizable()
                         .frame(width: 300, height: 300)
-                        .offset(x: 100, y: 650)
+                        .offset(x: 300, y: 550)
                         .scaleEffect(0.6)
                         .rotationEffect(.degrees(swingingxylphone ? -10 : 10), anchor: swingingxylphone ? .bottomLeading : .bottomTrailing)
                         .animation(.easeInOut(duration: 1).repeatCount(swingingxylphone ? 14 : 0, autoreverses: true), value: swingingxylphone)
@@ -161,7 +161,7 @@ struct InstrumentPage: View {
                     Image("keyboard")
                         .resizable()
                         .frame(width: 300, height: 350)
-                        .offset(x: -50, y: 350)
+                        .offset(x: 500, y: 150)
                         .scaleEffect(0.6)
                         .rotationEffect(.degrees(swingingkeyboard ? -10 : 10), anchor: swingingkeyboard ? .bottomLeading : .bottomTrailing)
                         .animation(.easeInOut(duration: 1).repeatCount(swingingkeyboard ? 14 : 0, autoreverses: true), value: swingingkeyboard)
@@ -174,11 +174,26 @@ struct InstrumentPage: View {
                     Button(action:{
                         self.isActive = true
                     }) {
-                        Image("NEXTNEXT")
+                        Image("backyard")
                     }
                     }
-                      .offset(x: -200, y: 400)
+                      .offset(x: 500, y: -450)
+
                 
+                
+                VStack{
+                    NavigationLink(destination: ContentView(), isActive: self.$isActive) {
+                        Text("")
+                    }
+                    Button(action:{
+                        self.isActive = true
+                    }) {
+                        Image("homebutton1")
+                            .resizable()
+                            .frame(width: 100, height: 100)
+                    }
+                    }
+                      .offset(x: -600, y: -450)
                 
             } 
             
@@ -190,6 +205,7 @@ struct InstrumentPage: View {
 struct InstrumentPage_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+        BeachPage()
             .previewInterfaceOrientation(.landscapeRight)
     }
 }
