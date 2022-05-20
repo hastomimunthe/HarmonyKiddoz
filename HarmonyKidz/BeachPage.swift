@@ -19,7 +19,7 @@ struct BeachPage : View{
 
 struct BeachPage_Previews: PreviewProvider {
     static var previews: some View {
-        InstrumentPage()
+        BeachPage()
             .previewInterfaceOrientation(.landscapeRight)
     }
 }

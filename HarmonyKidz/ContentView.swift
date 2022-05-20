@@ -31,14 +31,11 @@ struct ContentView: View {
             }
         
             } .navigationViewStyle(.stack)
-            
-            
-
+            .navigationBarHidden(true)
+        
         }
     }
     
-
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()

@@ -85,8 +85,10 @@ func playSoundXylophone(sound: String, type: String){
     }
 }
 
-
 struct InstrumentPage: View {
+    
+    @State private var isContent1Active = false
+    @State private var isContent2Active = false
     
     func buttonPressed(){
         print("button pressed")
@@ -103,41 +105,44 @@ struct InstrumentPage: View {
     @State private var isActive: Bool = false
     
     var body: some View {
-        
+        NavigationView {
         ZStack{
             Image("background room page")
                 .resizable()
                 .edgesIgnoringSafeArea(.all)
             ZStack{
-
+                VStack {
                     Button( action:{
                         buttonPressed()
                         playSoundDrum(sound: "Drum", type:"mp3")
                         swingingdrum.toggle()
                     }) {
-                        Image("drum")
-                            .resizable()
-                            .frame(width: 350, height: 350)
-                            .offset(x: -700, y: 250)
-                            .scaleEffect(0.6)
-                            .rotationEffect(.degrees(swingingdrum ? -10 : 10), anchor: swingingdrum ? .bottomLeading : .bottomTrailing)
-                            .animation(.easeInOut(duration: 1).repeatCount(swingingdrum ? 14 : 0, autoreverses: true), value: swingingdrum)
+                    Image("drum")
+                        .resizable()
+                        .scaleEffect(0.6)
+                        .rotationEffect(.degrees(swingingdrum ? -10 : 10), anchor: swingingdrum ? .bottomLeading : .bottomTrailing)
+                        .animation(.easeInOut(duration: 1).repeatCount(swingingdrum ? 14 : 0, autoreverses: true), value: swingingdrum)
                     }
+                }   .frame(width: 400, height: 400)
+                    .offset(x: -450, y: 80)
                 
+                VStack {
                     Button( action:{
                         buttonPressed()
                         swingingguitar.toggle()
                         playSoundGuitar(sound: "Guitar", type:"mp3")
                     }) {
-                        Image("guitar")
-                            .resizable()
-                            .frame(width: 420, height: 450)
-                            .offset(x: -320, y: 650)
-                            .scaleEffect(0.6)
-                            .rotationEffect(.degrees(swingingguitar ? -10 : 10), anchor: swingingguitar ? .bottomLeading : .bottomTrailing)
-                            .animation(.easeInOut(duration: 1).repeatCount(swingingguitar ? 14 : 0, autoreverses: true), value: swingingguitar)
+                    Image("guitar")
+                        .resizable()
+                        .scaleEffect(0.6)
+                        .rotationEffect(.degrees(swingingguitar ? -10 : 10), anchor: swingingguitar ? .bottomLeading : .bottomTrailing)
+                        .animation(.easeInOut(duration: 1).repeatCount(swingingguitar ? 14 : 0, autoreverses: true), value: swingingguitar)
 
                     }
+                }   .frame(width: 450, height: 500)
+                    .offset(x: -250, y: 330)
+                
+                VStack{
                     Button( action:{
                         buttonPressed()
                         swingingxylphone.toggle()
@@ -145,14 +150,15 @@ struct InstrumentPage: View {
                     }) {
                     Image("xylophone")
                         .resizable()
-                        .frame(width: 300, height: 300)
-                        .offset(x: 300, y: 550)
                         .scaleEffect(0.6)
                         .rotationEffect(.degrees(swingingxylphone ? -10 : 10), anchor: swingingxylphone ? .bottomLeading : .bottomTrailing)
                         .animation(.easeInOut(duration: 1).repeatCount(swingingxylphone ? 14 : 0, autoreverses: true), value: swingingxylphone)
                     }
+                }   .frame(width: 300, height: 300)
+                    .offset(x: 100, y: 400)
 
                 
+                VStack {
                     Button( action:{
                         buttonPressed()
                         swingingkeyboard.toggle()
@@ -160,52 +166,49 @@ struct InstrumentPage: View {
                     }) {
                     Image("keyboard")
                         .resizable()
-                        .frame(width: 300, height: 350)
-                        .offset(x: 500, y: 150)
-                        .scaleEffect(0.6)
                         .rotationEffect(.degrees(swingingkeyboard ? -10 : 10), anchor: swingingkeyboard ? .bottomLeading : .bottomTrailing)
                         .animation(.easeInOut(duration: 1).repeatCount(swingingkeyboard ? 14 : 0, autoreverses: true), value: swingingkeyboard)
                     }
+                }   .frame(width: 250, height: 250)
+                    .offset(x: 240, y: 150)
                 
                 VStack{
-                    NavigationLink(destination: BeachPage(), isActive: self.$isActive) {
+                NavigationLink(destination: ContentView(), isActive: self.$isContent1Active) {
                         Text("")
+                }
+                Button(action:{
+                    self.isContent1Active = true
+                }) {
+                    Image("homebutton1")
+                    .resizable()
                     }
-                    Button(action:{
-                        self.isActive = true
-                    }) {
-                        Image("backyard")
-                    }
-                    }
-                      .offset(x: 500, y: -450)
-
-                
+                }  .frame(width: 100, height: 100)
+                      .offset(x: -100, y: 100)
                 
                 VStack{
-                    NavigationLink(destination: ContentView(), isActive: self.$isActive) {
+                NavigationLink(destination: BeachPage(), isActive: self.$isContent2Active) {
                         Text("")
+                }
+                Button(action:{
+                    self.isContent2Active = true
+                }) {
+                    Image("backyard")
+                    .resizable()
                     }
-                    Button(action:{
-                        self.isActive = true
-                    }) {
-                        Image("homebutton1")
-                            .resizable()
-                            .frame(width: 100, height: 100)
-                    }
-                    }
-                      .offset(x: -600, y: -450)
-                
+                }  .frame(width: 100, height: 100)
+                      .offset(x: 100, y: 100)
             } 
             
+        }
         } .navigationBarHidden(true)
+            .navigationViewStyle(.stack)
     }
 }
 
 
 struct InstrumentPage_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
-        BeachPage()
+        InstrumentPage()
             .previewInterfaceOrientation(.landscapeRight)
     }
 }
