@@ -181,7 +181,7 @@ struct ClassroomPage: View {
                     Image("homebutton1")
                     .resizable()
                     }
-                } .frame(width: 130, height: 130)
+                } .frame(width: 120, height: 130)
                       .offset(x: -550, y: -450)
                 
                 VStack{

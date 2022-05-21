@@ -115,14 +115,14 @@ struct BackyardPage: View {
                         playSoundViolin(sound: "Violin", type:"mp3")
                         swingingviolin.toggle()
                     }) {
-                    Image("drum")
+                    Image("biola")
                         .resizable()
                         .scaleEffect(0.6)
                         .rotationEffect(.degrees(swingingviolin ? -10 : 10), anchor: swingingviolin ? .bottomLeading : .bottomTrailing)
                         .animation(.easeInOut(duration: 1).repeatCount(swingingviolin ? 30 : 0, autoreverses: true), value: swingingviolin)
                     }
                 }   .frame(width: 400, height: 400)
-                    .offset(x: -500, y: 30)
+                    .offset(x: -500, y: 300)
                 
                 VStack {
                     Button( action:{
@@ -130,15 +130,15 @@ struct BackyardPage: View {
                         swingingtambourine.toggle()
                         playSoundGuitar(sound: "Tambourine", type:"mp3")
                     }) {
-                    Image("guitar")
+                    Image("tamborin")
                         .resizable()
                         .scaleEffect(0.6)
                         .rotationEffect(.degrees(swingingtambourine ? -10 : 10), anchor: swingingtambourine ? .bottomLeading : .bottomTrailing)
                         .animation(.easeInOut(duration: 1).repeatCount(swingingtambourine ? 30 : 0, autoreverses: true), value: swingingtambourine)
 
                     }
-                }   .frame(width: 450, height: 500)
-                    .offset(x: -250, y: 280)
+                }   .frame(width: 400, height: 400)
+                    .offset(x: -190, y: 100)
                 
                 VStack{
                     Button( action:{
@@ -146,14 +146,14 @@ struct BackyardPage: View {
                         swinginghandbells.toggle()
                         playSoundHandbells(sound: "Handsbell", type:"mp3")
                     }) {
-                    Image("xylophone")
+                    Image("lonceng")
                         .resizable()
                         .scaleEffect(0.6)
                         .rotationEffect(.degrees(swinginghandbells ? -10 : 10), anchor: swinginghandbells ? .bottomLeading : .bottomTrailing)
                         .animation(.easeInOut(duration: 1).repeatCount(swinginghandbells ? 30 : 0, autoreverses: true), value: swinginghandbells)
                     }
-                }   .frame(width: 320, height: 320)
-                    .offset(x: 100, y: 350)
+                }   .frame(width: 350, height: 350)
+                    .offset(x: 450, y: 200)
 
                 
                 VStack {
@@ -162,13 +162,13 @@ struct BackyardPage: View {
                         swingingkalimba.toggle()
                         playSoundKeyboard(sound: "Kalimba", type:"mp3")
                     }) {
-                    Image("keyboard")
+                    Image("kalimba")
                         .resizable()
                         .rotationEffect(.degrees(swingingkalimba ? -10 : 10), anchor: swingingkalimba ? .bottomLeading : .bottomTrailing)
                         .animation(.easeInOut(duration: 1).repeatCount(swingingkalimba ? 30 : 0, autoreverses: true), value: swingingkalimba)
                     }
                 }   .frame(width: 250, height: 250)
-                    .offset(x: 240, y: 80)
+                    .offset(x: 160, y: 300)
                 
                 VStack{
                 NavigationLink(destination: MainPageView(), isActive: self.$isContent3Active) {
@@ -180,7 +180,7 @@ struct BackyardPage: View {
                     Image("homebutton1")
                     .resizable()
                     }
-                }  .frame(width: 130, height: 130)
+                }  .frame(width: 120, height: 130)
                       .offset(x: -550, y: -450)
                 
                 VStack{
@@ -205,7 +205,9 @@ struct BackyardPage: View {
 struct BeachPage_Previews: PreviewProvider {
     static var previews: some View {
         BackyardPage()
+            .previewInterfaceOrientation(.landscapeLeft)
         ClassroomPage()
+            .previewInterfaceOrientation(.landscapeRight)
         MainPageView()
             .previewInterfaceOrientation(.landscapeRight)
     }

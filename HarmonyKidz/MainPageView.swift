@@ -64,7 +64,9 @@ struct MainPageView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         MainPageView()
+            .previewInterfaceOrientation(.landscapeLeft)
         ClassroomPage()
+            .previewInterfaceOrientation(.landscapeLeft)
         BackyardPage()
             .previewInterfaceOrientation(.landscapeRight)
     }

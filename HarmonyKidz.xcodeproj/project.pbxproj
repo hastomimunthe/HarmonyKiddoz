@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5F69F8F32837215900D593DB /* BackyardPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F69F8F22837215900D593DB /* BackyardPage.swift */; };
+		5FFA54D72839485C006294A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FFA54D62839485C006294A8 /* LaunchScreen.storyboard */; };
 		6606E3452834E5F00026AA3B /* HarmonyKidzApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6606E3442834E5F00026AA3B /* HarmonyKidzApp.swift */; };
 		6606E3472834E5F00026AA3B /* MainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6606E3462834E5F00026AA3B /* MainPageView.swift */; };
 		6606E3492834E5F00026AA3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6606E3482834E5F00026AA3B /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		5F69F8F22837215900D593DB /* BackyardPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackyardPage.swift; sourceTree = "<group>"; };
+		5FFA54D62839485C006294A8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6606E3412834E5F00026AA3B /* HarmonyKidz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HarmonyKidz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6606E3442834E5F00026AA3B /* HarmonyKidzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarmonyKidzApp.swift; sourceTree = "<group>"; };
 		6606E3462834E5F00026AA3B /* MainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageView.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 		6606E3382834E5EF0026AA3B = {
 			isa = PBXGroup;
 			children = (
+				5FFA54D62839485C006294A8 /* LaunchScreen.storyboard */,
 				6606E3432834E5F00026AA3B /* HarmonyKidz */,
 				6606E3422834E5F00026AA3B /* Products */,
 			);
@@ -167,6 +170,7 @@
 				669BA0C12836693B00489D0E /* Keyboard.mp3 in Resources */,
 				668354742837EEB300C6333D /* Tambourine.mp3 in Resources */,
 				669BA0BF2836693100489D0E /* Drum.mp3 in Resources */,
+				5FFA54D72839485C006294A8 /* LaunchScreen.storyboard in Resources */,
 				668354702837EE9300C6333D /* Handsbell.mp3 in Resources */,
 				668354722837EE9C00C6333D /* Kalimba.mp3 in Resources */,
 			);
@@ -317,6 +321,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -346,6 +351,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
