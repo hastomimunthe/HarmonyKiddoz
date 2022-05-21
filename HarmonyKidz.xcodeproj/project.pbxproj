@@ -23,6 +23,8 @@
 		669BA0BF2836693100489D0E /* Drum.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 669BA0BE2836693100489D0E /* Drum.mp3 */; };
 		669BA0C12836693B00489D0E /* Keyboard.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 669BA0C02836693B00489D0E /* Keyboard.mp3 */; };
 		669BA0C32836694300489D0E /* Xylophone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 669BA0C22836694300489D0E /* Xylophone.mp3 */; };
+		66D9CBDA28395C8E002E1143 /* classroomsong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 66D9CBD928395C8E002E1143 /* classroomsong.mp3 */; };
+		66D9CBDC28395D79002E1143 /* Guitar Strum.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 66D9CBDB28395D79002E1143 /* Guitar Strum.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		669BA0BE2836693100489D0E /* Drum.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Drum.mp3; sourceTree = "<group>"; };
 		669BA0C02836693B00489D0E /* Keyboard.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Keyboard.mp3; sourceTree = "<group>"; };
 		669BA0C22836694300489D0E /* Xylophone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Xylophone.mp3; sourceTree = "<group>"; };
+		66D9CBD928395C8E002E1143 /* classroomsong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = classroomsong.mp3; sourceTree = "<group>"; };
+		66D9CBDB28395D79002E1143 /* Guitar Strum.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Guitar Strum.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,9 +99,11 @@
 				6683546B2837ECFB00C6333D /* Guitar.mp3 */,
 				6683546F2837EE9300C6333D /* Handsbell.mp3 */,
 				668354712837EE9C00C6333D /* Kalimba.mp3 */,
+				66D9CBDB28395D79002E1143 /* Guitar Strum.mp3 */,
 				668354732837EEB300C6333D /* Tambourine.mp3 */,
 				668354752837EEBB00C6333D /* Violin.mp3 */,
 				668354772837F79600C6333D /* introsound.mp3 */,
+				66D9CBD928395C8E002E1143 /* classroomsong.mp3 */,
 				6606E34B2834E5F00026AA3B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -167,12 +173,14 @@
 				668354782837F79600C6333D /* introsound.mp3 in Resources */,
 				6606E3492834E5F00026AA3B /* Assets.xcassets in Resources */,
 				669BA0C32836694300489D0E /* Xylophone.mp3 in Resources */,
+				66D9CBDA28395C8E002E1143 /* classroomsong.mp3 in Resources */,
 				669BA0C12836693B00489D0E /* Keyboard.mp3 in Resources */,
 				668354742837EEB300C6333D /* Tambourine.mp3 in Resources */,
 				669BA0BF2836693100489D0E /* Drum.mp3 in Resources */,
 				5FFA54D72839485C006294A8 /* LaunchScreen.storyboard in Resources */,
 				668354702837EE9300C6333D /* Handsbell.mp3 in Resources */,
 				668354722837EE9C00C6333D /* Kalimba.mp3 in Resources */,
+				66D9CBDC28395D79002E1143 /* Guitar Strum.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

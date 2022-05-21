@@ -8,6 +8,21 @@
 import SwiftUI
 import AVFoundation
 
+var backgroundSound : AVAudioPlayer?
+
+func playSoundBackground (sound: String, type: String){
+        if let path = Bundle.main.path(forResource: sound, ofType: type){
+            do {
+                backgroundSound = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
+                backgroundSound?.play()
+                backgroundSound?.numberOfLoops = -1
+                backgroundSound?.setVolume(0.1, fadeDuration: -1)
+                print("main")
+            } catch {
+                print("wadaw")
+            }
+        }
+}
 
 var audioPlayerGuitar : AVAudioPlayer?
 
@@ -20,6 +35,7 @@ func playSoundGuitar(sound: String, type: String){
                 audioPlayerGuitar = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
                 audioPlayerGuitar?.play()
                 audioPlayerGuitar?.numberOfLoops = -1
+                audioPlayerGuitar?.setVolume(1.0, fadeDuration: -1)
                 print("guitar")
             } catch {
                 print("wadaw")
@@ -39,6 +55,7 @@ func playSoundDrum(sound: String, type: String){
                 audioPlayerDrum = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
                 audioPlayerDrum?.play()
                 audioPlayerDrum?.numberOfLoops = -1
+                audioPlayerDrum?.setVolume(1.0, fadeDuration: -1)
                 print("drum")
             } catch {
                 print("wadaw")
@@ -58,6 +75,7 @@ func playSoundKeyboard(sound: String, type: String){
                 audioPlayerKeyboard = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
                 audioPlayerKeyboard?.play()
                 audioPlayerKeyboard?.numberOfLoops = -1
+                audioPlayerKeyboard?.setVolume(1.0, fadeDuration: -1)
                 print("keyboard")
             } catch {
                 print("wadaw")
@@ -77,6 +95,7 @@ func playSoundXylophone(sound: String, type: String){
                 audioPlayerXylophone = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
                 audioPlayerXylophone?.play()
                 audioPlayerXylophone?.numberOfLoops = -1
+                audioPlayerXylophone?.setVolume(1.0, fadeDuration: -1)
                 print("xylophone")
             } catch {
                 print("wadaw")
@@ -129,7 +148,7 @@ struct ClassroomPage: View {
                     Button( action:{
                         buttonPressed()
                         swingingguitar.toggle()
-                        playSoundGuitar(sound: "Guitar", type:"mp3")
+                        playSoundGuitar(sound: "Guitar Strum", type:"mp3")
                     }) {
                     Image("guitar")
                         .resizable()
@@ -201,6 +220,9 @@ struct ClassroomPage: View {
         }
         } .navigationBarHidden(true)
             .navigationViewStyle(.stack)
+            .onAppear {
+                playSoundBackground(sound: "introsound", type:"mp3")
+            }
     }
 }
 
