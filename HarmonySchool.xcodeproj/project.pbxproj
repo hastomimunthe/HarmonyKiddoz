@@ -30,7 +30,7 @@
 /* Begin PBXFileReference section */
 		5F69F8F22837215900D593DB /* BackyardPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackyardPage.swift; sourceTree = "<group>"; };
 		5FFA54D62839485C006294A8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		6606E3412834E5F00026AA3B /* HarmonyKidz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HarmonyKidz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6606E3412834E5F00026AA3B /* HarmonySchool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HarmonySchool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6606E3442834E5F00026AA3B /* HarmonyKidzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarmonyKidzApp.swift; sourceTree = "<group>"; };
 		6606E3462834E5F00026AA3B /* MainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageView.swift; sourceTree = "<group>"; };
 		6606E3482834E5F00026AA3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -72,7 +72,7 @@
 		6606E3422834E5F00026AA3B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6606E3412834E5F00026AA3B /* HarmonyKidz.app */,
+				6606E3412834E5F00026AA3B /* HarmonySchool.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,9 +112,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6606E3402834E5F00026AA3B /* HarmonyKidz */ = {
+		6606E3402834E5F00026AA3B /* HarmonySchool */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6606E34F2834E5F00026AA3B /* Build configuration list for PBXNativeTarget "HarmonyKidz" */;
+			buildConfigurationList = 6606E34F2834E5F00026AA3B /* Build configuration list for PBXNativeTarget "HarmonySchool" */;
 			buildPhases = (
 				6606E33D2834E5F00026AA3B /* Sources */,
 				6606E33E2834E5F00026AA3B /* Frameworks */,
@@ -124,9 +124,9 @@
 			);
 			dependencies = (
 			);
-			name = HarmonyKidz;
+			name = HarmonySchool;
 			productName = HarmonyKidz;
-			productReference = 6606E3412834E5F00026AA3B /* HarmonyKidz.app */;
+			productReference = 6606E3412834E5F00026AA3B /* HarmonySchool.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -144,7 +144,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6606E33C2834E5EF0026AA3B /* Build configuration list for PBXProject "HarmonyKidz" */;
+			buildConfigurationList = 6606E33C2834E5EF0026AA3B /* Build configuration list for PBXProject "HarmonySchool" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -157,7 +157,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6606E3402834E5F00026AA3B /* HarmonyKidz */,
+				6606E3402834E5F00026AA3B /* HarmonySchool */,
 			);
 		};
 /* End PBXProject section */
@@ -337,8 +337,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = team16.HarmonyKidz;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = team16.HarmonyKidoz;
+				PRODUCT_NAME = HarmonySchool;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -367,8 +367,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = team16.HarmonyKidz;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = team16.HarmonyKidoz;
+				PRODUCT_NAME = HarmonySchool;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -378,7 +378,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6606E33C2834E5EF0026AA3B /* Build configuration list for PBXProject "HarmonyKidz" */ = {
+		6606E33C2834E5EF0026AA3B /* Build configuration list for PBXProject "HarmonySchool" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6606E34D2834E5F00026AA3B /* Debug */,
@@ -387,7 +387,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6606E34F2834E5F00026AA3B /* Build configuration list for PBXNativeTarget "HarmonyKidz" */ = {
+		6606E34F2834E5F00026AA3B /* Build configuration list for PBXNativeTarget "HarmonySchool" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6606E3502834E5F00026AA3B /* Debug */,
