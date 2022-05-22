@@ -196,6 +196,7 @@ struct ClassroomPage: View {
                 }
                 Button(action:{
                     self.isContent1Active = true
+                    backgroundSound?.stop()
                 }) {
                     Image("homebutton1")
                     .resizable()
@@ -209,6 +210,7 @@ struct ClassroomPage: View {
                 }
                 Button(action:{
                     self.isContent2Active = true
+                    backgroundSound?.stop()
                 }) {
                     Image("backyard")
                     .resizable()
@@ -221,7 +223,7 @@ struct ClassroomPage: View {
         } .navigationBarHidden(true)
             .navigationViewStyle(.stack)
             .onAppear {
-                playSoundBackground(sound: "introsound", type:"mp3")
+                playSoundBackground(sound: "bgm room", type:"mp3")
             }
     }
 }

@@ -8,7 +8,22 @@
 import SwiftUI
 import AVFoundation
 
-//wkwk
+var backgroundSound2 : AVAudioPlayer?
+
+func playSoundBackground2 (sound: String, type: String){
+        if let path = Bundle.main.path(forResource: sound, ofType: type){
+            do {
+                backgroundSound2 = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
+                backgroundSound2?.play()
+                backgroundSound2?.numberOfLoops = -1
+                backgroundSound2?.setVolume(0.1, fadeDuration: -1)
+                print("main")
+            } catch {
+                print("wadaw")
+            }
+        }
+}
+
 var audioPlayerViolin : AVAudioPlayer?
 
 func playSoundViolin(sound: String, type: String){
@@ -176,6 +191,7 @@ struct BackyardPage: View {
                 }
                 Button(action:{
                     self.isContent3Active = true
+                    backgroundSound2?.stop()
                 }) {
                     Image("homebutton1")
                     .resizable()
@@ -189,6 +205,7 @@ struct BackyardPage: View {
                 }
                 Button(action:{
                     self.isContent4Active = true
+                    backgroundSound2?.stop()
                 }) {
                     Image("classroom")
                     .resizable()
@@ -200,6 +217,9 @@ struct BackyardPage: View {
         }
         } .navigationBarHidden(true)
             .navigationViewStyle(.stack)
+            .onAppear {
+                playSoundBackground2(sound: "bgm room", type:"mp3")
+            }
     }
 }
 struct BeachPage_Previews: PreviewProvider {
